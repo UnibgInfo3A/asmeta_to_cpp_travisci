@@ -6,10 +6,9 @@ deploy:
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   verbose: true
   keep-history: true
-  local-dir: results
+# current dir (everything that changed  local-dir:)
 # attenzione sul master direttamente può fare danni
-# questo causa ciclo infinito
-  target-branch: gh-pages
+  target-branch: master
   on:
     branch: master
    
