@@ -6,7 +6,8 @@ deploy:
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   verbose: true
   keep-history: true
-# current dir (everything that changed  local-dir:)
+# current dir to deploy to ghpages
+  local-dir: results
 # attenzione sul master direttamente può fare danni
   target-branch: gh-pages
   on:
