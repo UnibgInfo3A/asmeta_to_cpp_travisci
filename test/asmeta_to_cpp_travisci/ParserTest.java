@@ -1,11 +1,14 @@
 package asmeta_to_cpp_travisci;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.io.File;
 
 import org.asmeta.parser.ASMParser;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 class ParserTest {
 

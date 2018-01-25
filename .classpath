@@ -8,6 +8,6 @@
 	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.emf.common.jar"/>
 	<classpathentry kind="lib" path="lib/log4j.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
