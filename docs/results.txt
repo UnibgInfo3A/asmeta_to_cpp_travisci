@@ -9,3 +9,4 @@ asm_examples/ferrymanSimulator.asm
 asm_examples/ferrymanSimulator.asm
 asm_examples/ferrymanSimulator.asm
 asm_examples/ferrymanSimulator.asm
+asm_examples/ferrymanSimulator.asm
