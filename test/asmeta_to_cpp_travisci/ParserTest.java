@@ -10,7 +10,7 @@ import java.io.File;
 import org.asmeta.parser.ASMParser;
 import org.junit.Test;
 
-class ParserTest {
+public class ParserTest {
 
 	@Test
 	public void test() {
