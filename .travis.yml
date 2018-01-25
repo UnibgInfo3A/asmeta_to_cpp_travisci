@@ -8,7 +8,7 @@ deploy:
   keep-history: true
 # current dir (everything that changed  local-dir:)
 # attenzione sul master direttamente può fare danni
-  target-branch: gh-pages
+  target-branch: master
   on:
     branch: master
    
