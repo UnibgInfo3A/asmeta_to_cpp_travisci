@@ -13,7 +13,7 @@ import org.junit.Test;
 class ParserTest {
 
 	@Test
-	void test() {
+	public void test() {
 		try {
 			File file = new File("asm_examples/ferrymanSimulator.asm");
 			assertTrue(file.exists());
