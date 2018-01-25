@@ -9,7 +9,7 @@ deploy:
   local-dir: results
 # attenzione sul master direttamente può fare danni
 # questo causa ciclo infinito
-#  target-branch: master
+  target-branch: gh-pages
   on:
     branch: master
    
