@@ -1,0 +1,14 @@
+language: java
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  verbose: true
+  keep-history: true
+# current dir (everything that changed  local-dir:)
+# attenzione sul master direttamente può fare danni
+  target-branch: master
+  on:
+    branch: master
+   
