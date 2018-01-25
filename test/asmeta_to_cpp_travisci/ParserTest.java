@@ -23,7 +23,7 @@ public class ParserTest {
 			assertTrue(file.exists());
 			ASMParser.setUpReadAsm(file);
 			// write to page file the results of the parser
-			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("docs/results.txt", true)));
+			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("results/results.txt", true)));
 			out.println(asmFile);
 			out.close();
 		} catch (Exception e) {
