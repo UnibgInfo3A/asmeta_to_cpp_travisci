@@ -9,6 +9,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.sql.Timestamp;
 
 import org.asmeta.parser.ASMParser;
 import org.junit.Test;
@@ -24,6 +25,7 @@ public class ParserTest {
 			ASMParser.setUpReadAsm(file);
 			// write to page file the results of the parser
 			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("results/results.txt", true)));
+			out.println(new Timestamp(System.currentTimeMillis()));
 			out.println(asmFile);
 			out.close();
 			System.out.println(new File("results/results.txt").getAbsolutePath());
