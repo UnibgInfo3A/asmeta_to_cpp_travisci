@@ -8,7 +8,8 @@ deploy:
   keep-history: true
 # current dir (everything that changed  local-dir:)
 # attenzione sul master direttamente può fare danni
-  target-branch: master
+# questo causa ciclo infinito
+#  target-branch: master
   on:
     branch: master
    
