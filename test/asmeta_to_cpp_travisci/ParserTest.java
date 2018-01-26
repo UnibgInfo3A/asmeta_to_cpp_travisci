@@ -1,5 +1,5 @@
 package asmeta_to_cpp_travisci;
-
+ 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -12,8 +12,8 @@ import java.sql.Timestamp;
 import org.asmeta.parser.ASMParser;
 import org.junit.Test;
 
-public class ParserTest {
-
+public class ParserTest { 
+ 
 	private static final String RESULTS_INDEX_HTML = "docs/index.html";
 
 	@Test

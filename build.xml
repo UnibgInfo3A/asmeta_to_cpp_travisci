@@ -4,6 +4,10 @@
 	<property name="main.src.dir" value="src" />
 	<property name="test.build.dir" value="build/test" />
 	<property name="test.src.dir" value="test" />
+	<property name="result.dir" location="docs" />
+	<property name="result.classes.dir" location="${result.dir}/classes" />
+	<property name="result.report.dir" location="${result.dir}/site/jacoco" />
+	<property name="result.exec.file" location="${result.dir}/jacoco.exec" />
 
 	<path id="classpath.base" />
 
@@ -15,11 +19,27 @@
 		<pathelement location="lib/org.eclipse.emf.common.jar" />
 		<pathelement location="lib/org.eclipse.emf.ecore.jar" />
 		<pathelement location="lib/log4j.jar" />
+		<pathelement location="lib/jacocoant.jar" />
 		<pathelement location="${main.build.dir}" />
 		<path refid="classpath.base" />
 	</path>
 
-	<target name="test" depends="run, clean" />
+
+	<!--  Step 1: Import JaCoCo Ant tasks  -->
+	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+		<classpath path="lib/jacocoant.jar" />
+	</taskdef>
+
+	<target name="clean">
+		<delete>
+			<fileset dir="${basedir}" includes="**/*.class" />
+		</delete>
+		<echo message="clean done" />
+	</target>
+
+
+
+
 
 	<target name="compile">
 		<mkdir dir="${main.build.dir}" />
@@ -52,52 +72,40 @@
 	</target>
 
 
-	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
-		<classpath path="lib/jacocoant.jar" />
-	</taskdef>
-
-	
-	<target name="coverage" depends="build">
-
-		<coverage destfile="docs/jacoco.exec">
-			<junit fork="true" forkmode="once">
-				<test name="asmeta_to_cpp_travisci.ParserTest" />
-				<classpath>
-					<pathelement location="./bin" />
-				</classpath>
-			</junit>
+	<target name="test" depends="run, clean">  
+		<echo message="test coverage" />
+		<!-- Step 2: Wrap test execution with the JaCoCo coverage task 	-->
+		<coverage >
+			<java classname="ParserTest" fork="true">
+				<classpath path="${test.src.dir}/asmeta_to_cpp_travisci/" />
+			</java>
 		</coverage>
+	</target>
+
+	<target name="report" depends="test">
+		<!--  Step 3: Create coverage report  -->
 		<report>
-
+			<!-- This task needs the collected execution data and ... -->
 			<executiondata>
-				<file file="jacoco.exec" />
+				<file file="${result.exec.file}" />
 			</executiondata>
-
-			<merge destfile="merged.exec">
-				<fileset dir="executionData" includes="*.exec" />
-			</merge>
-
-
-			<structure name="Example Project">
+			<!--  the class files and optional source files ...  -->
+			<structure name="JaCoCo Ant Example">
 				<classfiles>
-					<fileset dir="classes" />
+					<fileset dir="${result.classes.dir}" />
 				</classfiles>
 				<sourcefiles encoding="UTF-8">
-					<fileset dir="docs" />
+					<fileset dir="${test.src.dir}" />
 				</sourcefiles>
 			</structure>
-
-			<html destdir="docs/report.html" />
-			<csv destfile="docs/report.csv" />
-
+			<!--  to produce reports in different formats.  -->
+			<html destdir="${result.report.dir}" />
+			<csv destfile="${result.report.dir}/report.csv" />
+			<xml destfile="${result.report.dir}/report.xml" />
 		</report>
 	</target>
+
 	<!-- delete all class files -->
 	<!-- To run this: use "ant clean" -->
-	<target name="clean">
-		<delete>
-			<fileset dir="${basedir}" includes="**/*.class" />
-		</delete>
-		<echo message="clean done" />
-	</target>
+
 </project>
