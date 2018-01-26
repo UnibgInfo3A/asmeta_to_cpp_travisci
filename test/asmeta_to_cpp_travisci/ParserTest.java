@@ -35,5 +35,28 @@ public class ParserTest {
 			fail("");
 		}
 	}
+	
+
+	@Test
+	public void test2() {
+		try {
+			String asmFile = "asm_examples/coffeeVendingMachine.asm";
+			File file = new File(asmFile);
+			assertTrue(file.exists());
+			ASMParser.setUpReadAsm(file);
+			// write to page file the results of the parser
+			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("results/index.html", true)));
+			// add time stamp
+			out.print(new Timestamp(System.currentTimeMillis()) + "\t");
+			// name of the file
+			out.println(asmFile);
+			out.close();
+			System.out.println(new File("results/index.html").getAbsolutePath());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			fail("");
+		}
+	}
 
 }
