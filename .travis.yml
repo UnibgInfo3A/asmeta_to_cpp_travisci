@@ -6,9 +6,10 @@ deploy:
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   verbose: true
   keep-history: true
+  project-name: asmeta2cpp results [ci skip]
 # current dir to deploy to ghpages
   local-dir: results
-# attenzione sul master direttamente può fare danni
+# attenzione sul master direttamente può fare danni crea ricorsione
   target-branch: gh-pages
   on:
     branch: master
