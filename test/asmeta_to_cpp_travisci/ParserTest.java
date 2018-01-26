@@ -24,7 +24,7 @@ public class ParserTest {
 			// write to page file the results of the parser
 			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("results/index.html", true)));
 			// add time stamp
-			out.print(new Timestamp(System.currentTimeMillis()) + "\n");
+			out.print(new Timestamp(System.currentTimeMillis()) + "\t");
 			// name of the file
 			out.println(asmFile);
 			out.close();
@@ -47,7 +47,7 @@ public class ParserTest {
 			// write to page file the results of the parser
 			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("results/index.html", true)));
 			// add time stamp
-			out.print(new Timestamp(System.currentTimeMillis()) + "\n");
+			out.print(new Timestamp(System.currentTimeMillis()) + "\t");
 			// name of the file
 			out.println(asmFile);
 			out.close();
