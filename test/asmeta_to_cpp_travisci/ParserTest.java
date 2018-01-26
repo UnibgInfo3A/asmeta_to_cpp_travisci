@@ -27,6 +27,12 @@ public class ParserTest {
 		String asmFile = "asm_examples/coffeeVendingMachine.asm";
 		testAsmFile(asmFile);
 	}
+	
+	@Test
+	public void test3() {
+		String asmFile = "asm_examples/coffeeVendingMachineNC.asm";
+		testAsmFile(asmFile);
+	}
 
 	private void testAsmFile(String asmFile) {
 		try {
@@ -48,26 +54,5 @@ public class ParserTest {
 		}
 	}
 	
-	@Test
-	public void test3() {
-		try {
-			String asmFile = "asm_examples/coffeeVendingMachineNC.asm";
-			File file = new File(asmFile);
-			assertTrue(file.exists());
-			ASMParser.setUpReadAsm(file);
-			// write to page file the results of the parser
-			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("results/index.html", true)));
-			// add time stamp
-			out.print(new Timestamp(System.currentTimeMillis()) + "\t");
-			// name of the file
-			out.println(asmFile);
-			out.close();
-			System.out.println(new File("results/index.html").getAbsolutePath());
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			fail("");
-		}
-	}
 
 }
