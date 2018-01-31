@@ -41,7 +41,6 @@
 	<target name="init">
 		<mkdir dir="${build.classes.dir}" />
 		<mkdir dir="${build.test.dir}" />
-		<mkdir dir="${build.jar.dir}" />
 		<mkdir dir="${output.report.dir}" />
 		<mkdir dir="${output.jacoco.dir}" />
 	</target>
