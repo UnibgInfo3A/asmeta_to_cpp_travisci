@@ -15,10 +15,15 @@
 		<pathelement location="lib/hamcrest-core-1.3.jar" />
 		<pathelement location="lib/asmeta.parser_1.0.0.jar" />
 		<pathelement location="lib/asmeta.emf_1.0.0.jar" />
+		<pathelement location="lib/asmeta.simulator_1.0.0.jar" />
+		<pathelement location="lib/asmeta.cpp_codegen.jar" />
 		<pathelement location="lib/org.eclipse.emf.common.jar" />
 		<pathelement location="lib/org.eclipse.emf.ecore.jar" />
 		<pathelement location="lib/log4j.jar" />
 		<pathelement location="lib/jacocoant.jar" />
+		<pathelement location="lib/org.eclipse.xtext_2.13.0.v20171020-0708.jar" />
+		<pathelement location="lib/org.eclipse.xtext.xbase.lib_2.13.0.v20171020-0659.jar" />
+		<pathelement location="lib/com.google.guava_21.0.0.v20170206-1425.jar" />
 		<pathelement location="${main.build.dir}" />
 		<path refid="classpath.base" />
 	</path>
@@ -99,7 +104,11 @@
 			</junit>
 		</jacoco:coverage>
 	</target>
-
-
-
+	<!--  export of jars for asmeta2 cpp  -->
+	<property name="ASMETA" value="Z:\AgDocuments\google_drive\codice\research" />
+	<property name="ASM_TOCPP_HOME" value="${ASMETA}\asmeta\code\experimental\asmetal2cpp" />
+	<property name="ASM_TOCPP_CODE_GEN" value="${ASM_TOCPP_HOME}\asmetal2cpp_codegen" />
+	<target name="export_jar_codegen">
+		<jar destfile="./lib/asmeta.cpp_codegen.jar" basedir="${ASM_TOCPP_CODE_GEN}/bin" />
+	</target>
 </project>
