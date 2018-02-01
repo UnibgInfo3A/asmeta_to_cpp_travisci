@@ -76,10 +76,12 @@
 					<pathelement location="${build.test.dir}" />
 				</classpath>
 				<classpath refid="classpath.test" />
-				<test name="asmeta_to_cpp_travisci.ParserTest" />
+					<!--	<test name="asmeta_to_cpp_travisci.ParserTest" />
 				<test name="asmeta_to_cpp_travisci.ToCppTranslatorTest" />
-				<test name="asmeta_to_cpp_travisci.BoostUnitNuSMVTest" />
+				<test name="asmeta_to_cpp_travisci.BoostUnitNuSMVTest" />-->
 				<test name="asmeta_to_cpp_travisci.BoostUnitSimulatorTest" />
+				<formatter type="plain" usefile="false" />
+				<!-- to screen -->
 			</junit>
 		</jacoco:coverage>
 		<echo>test coverage complete!</echo>
