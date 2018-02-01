@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="asmeta_to_cpp_travisci" default="start" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
+<project name="asmeta_to_cpp_travisci" default="clean" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
 
 	<property name="src.dir" location="./src/asmeta_to_cpp_travisci" />
 	<property name="test.dir" location="./test/asmeta_to_cpp_travisci" />
@@ -15,6 +15,9 @@
 	<property name="output.exec.fileSrc" location="${output.jacoco.dir}/jacocosrc.exec" />
 	<property name="output.exec.fileTest" location="${output.jacoco.dir}/jacocotest.exec" />
 	<property name="output.exec.mergedfile" location="${output.jacoco.dir}/merged.exec" />
+	<property name="asmExample" location="./asm_examples" />
+	<property name="temp" location="./temp" />
+
 
 	<path id="classpath.base" />
 
@@ -23,7 +26,7 @@
 		<pathelement location="asmetaJar/asmeta.emf_1.0.0.jar" />
 		<pathelement location="asmetaJar/org.eclipse.emf.common.jar" />
 		<pathelement location="asmetaJar/org.eclipse.emf.ecore.jar" />
-		<pathelement location="asmetaJar/asmeta.simulator_1.0.0.jar" />
+		<pathelement location="lib/asmeta.simulator_1.0.0.jar" />
 		<pathelement location="asmetaJar/asmeta.cpp_codegen.jar" />
 		<pathelement location="asmetaJar/asmeta.boost_unit.jar" />
 		<pathelement location="lib/atgt.jar" />
@@ -51,6 +54,7 @@
 		<mkdir dir="${build.test.dir}" />
 		<mkdir dir="${output.report.dir}" />
 		<mkdir dir="${output.jacoco.dir}" />
+		<mkdir dir="${temp}" />
 	</target>
 
 
@@ -76,12 +80,11 @@
 					<pathelement location="${build.test.dir}" />
 				</classpath>
 				<classpath refid="classpath.test" />
-					<!--	<test name="asmeta_to_cpp_travisci.ParserTest" />
+				<test name="asmeta_to_cpp_travisci.ParserTest" />
 				<test name="asmeta_to_cpp_travisci.ToCppTranslatorTest" />
-				<test name="asmeta_to_cpp_travisci.BoostUnitNuSMVTest" />-->
-				<test name="asmeta_to_cpp_travisci.BoostUnitSimulatorTest" />
-				<formatter type="plain" usefile="false" />
-				<!-- to screen -->
+				<test name="asmeta_to_cpp_travisci.BoostUnitCoverageTest" />
+				<!-- Print error message to screen 
+				<formatter type="plain" />-->
 			</junit>
 		</jacoco:coverage>
 		<echo>test coverage complete!</echo>
@@ -99,6 +102,9 @@
 					<fileset dir="${jar.dir}">
 						<include name="*.jar" />
 					</fileset>
+					<fileset dir="${temp}">
+						<include name="*.cpp" />
+					</fileset>
 				</classfiles>
 				<sourcefiles encoding="UTF-8">
 					<fileset dir="${test.dir}" />
@@ -112,12 +118,13 @@
 	<target name="start" depends="clean,report" />
 
 	<!-- delete all class files -->
-	<target name="clean">
+	<target name="clean" depends="report">
 		<delete dir="${build.dir}" />
 		<!-- Se voglio resettare il report ogni volta aggiungere questa riga, togliere depends="report"
 				 e aggiungere depends="report" nel target "start"
 				<delete dir="${output.dir}" />
 			-->
+		<delete dir="./temp" />
 		<fileset dir="${asmExample}" includes="*.o" />
 		<fileset dir="${asmExample}" includes="*.cpp" />
 		<fileset dir="${asmExample}" includes="*.h" />
