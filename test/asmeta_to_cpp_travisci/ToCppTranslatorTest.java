@@ -13,6 +13,8 @@ public class ToCppTranslatorTest {
 		String asmFile = "asm_examples/ferrymanSimulator.asm";
 		testAsmFile(asmFile);
 	}	
+	
+	
 	private void testAsmFile(String asmFile) {
 		try {
 			GeneratorCompilerTest.test(asmFile);
