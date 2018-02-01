@@ -6,7 +6,7 @@ import org.asmeta.asm2code.GeneratorCompilerTest;
 import org.junit.Test;
 
 public class ToCppTranslatorTest { 
- 
+
 
 	@Test
 	public void test() {
