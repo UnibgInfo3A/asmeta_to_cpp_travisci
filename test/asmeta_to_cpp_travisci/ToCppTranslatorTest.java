@@ -10,7 +10,7 @@ public class ToCppTranslatorTest {
 
 	@Test
 	public void test() {
-		String asmFile = "asm_examples/ferrymanSimulator.asm";
+		String asmFile = "asm_examples/coffeeVendingMachineNC.asm";
 		testAsmFile(asmFile);
 	}	
 	

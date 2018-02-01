@@ -32,9 +32,11 @@
 	<property name="ASMETA" value="${AsmetaDirSilviaCasa}" />
 	<property name="ASM_TOCPP_HOME" value="${ASMETA}\code\experimental\asmetal2cpp" />
 	<property name="ASM_TOCPP_CODE_GEN" value="${ASM_TOCPP_HOME}\asmetal2cpp_codegen" />
-
+	<property name="ASM_BOOST_UNIT_GEN" value="${ASM_TOCPP_HOME}\asmetal2cpp_boostunit" />
 
 	<target name="export_jar_codegen">
 		<jar destfile="./asmetaJar/asmeta.cpp_codegen.jar" basedir="${ASM_TOCPP_CODE_GEN}/bin" />
+		<jar destfile="./asmetaJar/asmeta.boost_unit.jar" basedir="${ASM_BOOST_UNIT_GEN}/bin" />
 	</target>
+	
 </project>
