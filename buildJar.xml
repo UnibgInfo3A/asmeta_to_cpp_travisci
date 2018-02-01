@@ -3,6 +3,7 @@
 
 	<property name="src.dir" location="./src/asmeta_to_cpp_travisci" />
 	<property name="test.dir" location="./test/asmeta_to_cpp_travisci" />
+	<property name="jar.dir" location="./lib" /> 
 	<property name="build.dir" location="./build" />
 	<property name="build.classes.dir" location="${build.dir}/classes" />
 	<property name="build.test.dir" location="${build.dir}/tests" />
@@ -83,7 +84,7 @@
 				<classfiles>
 					<fileset dir="${build.test.dir}" />
 					<fileset dir="${jar.dir}" > <!-- Aggiunge la copertura dei jar al report -->
-						<include name="*.jar"/> 
+						<include name=".jar/*.asmeta*"/> 
 					</fileset>
 				</classfiles>
 				<sourcefiles encoding="UTF-8">
