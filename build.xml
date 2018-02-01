@@ -32,7 +32,14 @@
 	<property name="ASMETA" value="${AsmetaDirSilviaCasa}" />
 	<property name="ASM_TOCPP_HOME" value="${ASMETA}\code\experimental\asmetal2cpp" />
 	<property name="ASM_TOCPP_CODE_GEN" value="${ASM_TOCPP_HOME}\asmetal2cpp_codegen" />
-	<target name="export_jar_codegen">
+
+	<target name="compile">
+		<javac srcdir="${ASM_TOCPP_CODE_GEN}\src">
+			<classpath refid="classpath.test" />
+		</javac>
+	</target>
+
+	<target name="export_jar_codegen" depends="compile">
 		<jar destfile="./asmetaJar/asmeta.cpp_codegen.jar" basedir="${ASM_TOCPP_CODE_GEN}/bin" />
 	</target>
 </project>
