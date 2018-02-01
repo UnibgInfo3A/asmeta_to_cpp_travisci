@@ -1,20 +1,12 @@
 <?xml version="1.0"?>
-<project name="asmeta_to_cpp_travisci" default="start" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
-
-	<property name="src.dir" location="./src/asmeta_to_cpp_travisci" />
-	<property name="test.dir" location="./test/asmeta_to_cpp_travisci" />
-	<property name="jar.dir" location="./asmetaJar" />
-	<property name="build.dir" location="./build" />
-	<property name="build.classes.dir" location="${build.dir}/classes" />
-	<property name="build.test.dir" location="${build.dir}/tests" />
-	<property name="build.classes.instr.dir" location="${build.dir}/classes-instr" />
-	<property name="build.test.instr.dir" location="${build.dir}/tests-instr" />
-	<property name="output.dir" location="./output" />
-	<property name="output.report.dir" location="${output.dir}/report" />
-	<property name="output.jacoco.dir" location="${output.dir}/jacoco" />
-	<property name="output.exec.fileSrc" location="${output.jacoco.dir}/jacocosrc.exec" />
-	<property name="output.exec.fileTest" location="${output.jacoco.dir}/jacocotest.exec" />
-	<property name="output.exec.mergedfile" location="${output.jacoco.dir}/merged.exec" />
+<project name="asmeta_to_cpp_travisci" default="export_jar_codegen" basedir="">
+	<property name="main.build.dir" value="build/main" />
+	<property name="main.src.dir" value="src" />
+	<property name="test.build.dir" value="build/test" />
+	<property name="test.src.dir" value="test" />
+	<property name="result.dir" location="docs" />
+	<property name="result.classes.dir" location="${result.dir}/classes" />
+	<property name="result.exec.file" location="${result.dir}/jacoco.exec" />
 
 	<path id="classpath.base" />
 
@@ -24,7 +16,6 @@
 		<pathelement location="asmetaJar/org.eclipse.emf.common.jar" />
 		<pathelement location="asmetaJar/org.eclipse.emf.ecore.jar" />
 		<pathelement location="asmetaJar/asmeta.simulator_1.0.0.jar" />
-		<pathelement location="asmetaJar/asmeta.cpp_codegen.jar" />
 		<pathelement location="lib/junit-4.11.jar" />
 		<pathelement location="lib/hamcrest-core-1.3.jar" />
 		<pathelement location="lib/log4j.jar" />
@@ -35,87 +26,15 @@
 		<path refid="classpath.base" />
 	</path>
 
+	<!--  export of jars for asmeta2 cpp  -->
+	<property name="AsmetaDirA" value="Z:\AgDocuments\google_drive\codice\research}\asmeta" />
+	<property name="AsmetaDirSilviaCasa" value="..\..\SVN\Sourceforge\ASMETA" />
+	<property name="ASMETA" value="${AsmetaDirSilviaCasa}" />
+	<property name="ASM_TOCPP_HOME" value="${ASMETA}\code\experimental\asmetal2cpp" />
+	<property name="ASM_TOCPP_CODE_GEN" value="${ASM_TOCPP_HOME}\asmetal2cpp_codegen" />
 
-	<!--  Import JaCoCo Ant tasks  -->
-	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
-		<classpath path="lib/jacocoant.jar" />
-	</taskdef>
 
-
-
-	<target name="init">
-		<mkdir dir="${build.classes.dir}" />
-		<mkdir dir="${build.test.dir}" />
-		<mkdir dir="${output.report.dir}" />
-		<mkdir dir="${output.jacoco.dir}" />
+	<target name="export_jar_codegen">
+		<jar destfile="./asmetaJar/asmeta.cpp_codegen.jar" basedir="${ASM_TOCPP_CODE_GEN}/bin" />
 	</target>
-
-
-	<target name="compileTest" depends="init">
-		<javac srcdir="${test.dir}" destdir="${build.test.dir}" includeantruntime="false" debug="on">
-			<classpath refid="classpath.test" />
-		</javac>
-	</target>
-
-	<target name="instrumentTest" depends="compileTest">
-		<jacoco:instrument destdir="${build.test.instr.dir}">
-			<fileset dir="${build.test.dir}" />
-		</jacoco:instrument>
-		<echo>instrumentation test complete!</echo>
-	</target>
-
-
-	<target name="test" depends="instrumentTest">
-		<!-- Step 2: Wrap test execution with the JaCoCo coverage task 	-->
-		<jacoco:coverage destFile="${output.exec.fileTest} ">
-			<junit fork="true" forkmode="once">
-				<classpath>
-					<pathelement location="${build.test.dir}" />
-				</classpath>
-				<classpath refid="classpath.test" />
-				<test name="asmeta_to_cpp_travisci.ParserTest" />
-				<test name="asmeta_to_cpp_travisci.ToCppTranslatorTest" />
-			</junit>
-		</jacoco:coverage>
-		<echo>test coverage complete!</echo>
-	</target>
-
-	<target name="report" depends="test">
-		<jacoco:report>
-			<executiondata>
-				<file file="${output.exec.fileTest}" />
-			</executiondata>
-			<structure name="asmeta_tp_cpp_travisci">
-				<classfiles>
-					<fileset dir="${build.test.dir}" />
-					<!-- Aggiunge la copertura dei jar nella directory jar.dir al report -->
-					<fileset dir="${jar.dir}">
-						<include name="*.jar" />
-					</fileset>
-				</classfiles>
-				<sourcefiles encoding="UTF-8">
-					<fileset dir="${test.dir}" />
-				</sourcefiles>
-			</structure>
-			<html destdir="${output.report.dir}" />
-		</jacoco:report>
-		<echo>report complete!</echo>
-	</target>
-
-	<target name="start" depends="clean,report" />
-
-	<!-- delete all class files -->
-	<target name="clean">
-		<delete dir="${build.dir}" />
-		<!-- Se voglio resettare il report ogni volta aggiungere questa riga, togliere depends="report"
-				 e aggiungere depends="report" nel target "start"
-				<delete dir="${output.dir}" />
-			-->
-		<fileset dir="${asmExample}" includes="*.o" />
-		<fileset dir="${asmExample}" includes="*.cpp" />
-		<fileset dir="${asmExample}" includes="*.h" />
-		<echo message="clean done" />
-	</target>
-
-
 </project>
