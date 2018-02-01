@@ -1,16 +1,8 @@
 package asmeta_to_cpp_travisci;
- 
-import static org.junit.Assert.assertTrue;
+
 import static org.junit.Assert.fail;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.sql.Timestamp;
-
 import org.asmeta.asm2code.GeneratorCompilerTest;
-import org.asmeta.parser.ASMParser;
 import org.junit.Test;
 
 public class ToCppTranslatorTest { 
