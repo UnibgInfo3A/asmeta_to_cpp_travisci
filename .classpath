@@ -23,6 +23,9 @@
 	<classpathentry kind="lib" path="asmetaJar/asmeta.boost_unit.jar"/>
 	<classpathentry kind="lib" path="lib/nusmv_generator.jar"/>
 	<classpathentry kind="lib" path="lib/atgt.jar"/>
+<<<<<<< HEAD
+>>>>>>> parent of 4733370... update
+=======
 >>>>>>> parent of 4733370... update
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
