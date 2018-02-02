@@ -18,6 +18,18 @@
 	<path id="classpath.base" />
 
 	<path id="classpath.test">
+<<<<<<< HEAD:buildNew.xml
+=======
+		<pathelement location="asmetaJar/asmeta.parser_1.0.0.jar" />
+		<pathelement location="asmetaJar/asmeta.emf_1.0.0.jar" />
+		<pathelement location="asmetaJar/org.eclipse.emf.common.jar" />
+		<pathelement location="asmetaJar/org.eclipse.emf.ecore.jar" />
+		<pathelement location="asmetaJar/asmeta.simulator_1.0.0.jar" />
+		<pathelement location="asmetaJar/asmeta.cpp_codegen.jar" />
+		<pathelement location="asmetaJar/asmeta.boost_unit.jar" />
+		<pathelement location="lib/atgt.jar" />
+		<pathelement location="lib/nusmv_generator.jar" />
+>>>>>>> parent of 4733370... update:buildcoverage.xml
 		<pathelement location="lib/junit-4.11.jar" />
 		<pathelement location="lib/hamcrest-core-1.3.jar" />
 		<pathelement location="lib/asmeta.parser_1.0.0.jar" />
@@ -68,7 +80,16 @@
 					<pathelement location="${build.test.dir}" />
 				</classpath>
 				<classpath refid="classpath.test" />
+<<<<<<< HEAD:buildNew.xml
 				<test name="asmeta_to_cpp_travisci.ParserTest" />
+=======
+					<!--	<test name="asmeta_to_cpp_travisci.ParserTest" />
+				<test name="asmeta_to_cpp_travisci.ToCppTranslatorTest" />
+				<test name="asmeta_to_cpp_travisci.BoostUnitNuSMVTest" />-->
+				<test name="asmeta_to_cpp_travisci.BoostUnitSimulatorTest" />
+				<formatter type="plain" usefile="false" />
+				<!-- to screen -->
+>>>>>>> parent of 4733370... update:buildcoverage.xml
 			</junit>
 		</jacoco:coverage>
 		<echo>test coverage complete!</echo>
@@ -82,6 +103,13 @@
 			<structure name="asmeta_tp_cpp_travisci">
 				<classfiles>
 					<fileset dir="${build.test.dir}" />
+<<<<<<< HEAD:buildNew.xml
+=======
+					<!-- Aggiunge la copertura dei jar nella directory jar.dir al report -->
+					<fileset dir="${jar.dir}">
+						<include name="*.jar" />
+					</fileset>
+>>>>>>> parent of 4733370... update:buildcoverage.xml
 				</classfiles>
 				<sourcefiles encoding="UTF-8">
 					<fileset dir="${test.dir}" />
@@ -101,6 +129,12 @@
 				 e aggiungere depends="report" nel target "start"
 				<delete dir="${output.dir}" />
 			-->
+<<<<<<< HEAD:buildNew.xml
+=======
+		<fileset dir="${asmExample}" includes="*.o" />
+		<fileset dir="${asmExample}" includes="*.cpp" />
+		<fileset dir="${asmExample}" includes="*.h" />
+>>>>>>> parent of 4733370... update:buildcoverage.xml
 		<echo message="clean done" />
 	</target>
 
