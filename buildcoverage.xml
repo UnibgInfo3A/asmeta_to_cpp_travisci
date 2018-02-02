@@ -80,8 +80,8 @@
 					<pathelement location="${build.test.dir}" />
 				</classpath>
 				<classpath refid="classpath.test" />
-				<test name="asmeta_to_cpp_travisci.ParserTest" />
-				<test name="asmeta_to_cpp_travisci.ToCppTranslatorTest" />
+				<!-- <test name="asmeta_to_cpp_travisci.ParserTest" />
+				<test name="asmeta_to_cpp_travisci.ToCppTranslatorTest" />	-->
 				<test name="asmeta_to_cpp_travisci.BoostUnitCoverageTest" />
 				<!-- Print error message to screen 
 				<formatter type="plain" />-->
