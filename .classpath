@@ -3,21 +3,13 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/asmeta.parser_1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/asmeta.emf_1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.common.jar"/>
 	<classpathentry kind="lib" path="lib/log4j.jar"/>
 	<classpathentry kind="lib" path="lib/jacocoant.jar"/>
 	<classpathentry kind="lib" path="lib/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="lib/org.eclipse.xtext_2.13.0.v20171020-0708.jar"/>
-	<classpathentry kind="lib" path="lib/org.eclipse.xtext.xbase.lib_2.13.0.v20171020-0659.jar"/>
-	<classpathentry kind="lib" path="lib/com.google.guava_21.0.0.v20170206-1425.jar"/>
-	<classpathentry kind="lib" path="asmetaJar/asmeta.emf_1.0.0.jar"/>
-	<classpathentry kind="lib" path="asmetaJar/asmeta.parser_1.0.0.jar"/>
-	<classpathentry kind="lib" path="asmetaJar/org.eclipse.emf.common.jar"/>
-	<classpathentry kind="lib" path="asmetaJar/org.eclipse.emf.ecore.jar"/>
-	<classpathentry kind="lib" path="asmetaJar/asmeta.boost_unit.jar"/>
-	<classpathentry kind="lib" path="lib/nusmv_generator.jar"/>
-	<classpathentry kind="lib" path="lib/atgt.jar"/>
-	<classpathentry kind="lib" path="lib/asmeta.simulator_1.0.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="asmetaJar/asmeta.cpp_codegen.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
