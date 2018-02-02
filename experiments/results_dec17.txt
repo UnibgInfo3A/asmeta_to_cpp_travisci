@@ -69,3 +69,11 @@ asm_examples/coffeeVendingMachineNC.asm	AsmTSGeneratorByNuSMV	toNumSteps:0	nTest
 asm_examples/coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:56	nTests:7	maxLength:8	time:4964	100.0
 asm_examples/coffeeVendingMachineNC.asm	AsmTSGeneratorByNuSMV	toNumSteps:0	nTests:0	maxLength:0	time:4174	3.85
 asm_examples/coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:56	nTests:7	maxLength:8	time:4978	100.0
+asm_examples/coffeeVendingMachineNC.asm	AsmTSGeneratorByNuSMV	toNumSteps:0	nTests:0	maxLength:0	time:6534	3.85
+asm_examples/coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:56	nTests:7	maxLength:8	time:4999	100.0
+asm_examples/coffeeVendingMachineNC.asm	AsmTSGeneratorByNuSMV	toNumSteps:0	nTests:0	maxLength:0	time:4093	3.85
+asm_examples/coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:56	nTests:7	maxLength:8	time:4902	100.0
+asm_examples/coffeeVendingMachineNC.asm	AsmTSGeneratorByNuSMV	toNumSteps:0	nTests:0	maxLength:0	time:4041	3.85
+asm_examples/coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:56	nTests:7	maxLength:8	time:4892	100.0
+asm_examples/coffeeVendingMachineNC.asm	AsmTSGeneratorByNuSMV	toNumSteps:0	nTests:0	maxLength:0	time:6114	3.85
+asm_examples/coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:56	nTests:7	maxLength:8	time:4989	100.0

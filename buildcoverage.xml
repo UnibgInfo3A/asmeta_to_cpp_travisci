@@ -102,7 +102,7 @@
 					<fileset dir="${jar.dir}">
 						<include name="*.jar" />
 					</fileset>
-					<fileset dir="${temp}">
+					<fileset dir="${asmExample}">
 						<include name="*.cpp" />
 					</fileset>
 				</classfiles>
@@ -125,9 +125,11 @@
 				<delete dir="${output.dir}" />
 			-->
 		<delete dir="./temp" />
-		<fileset dir="${asmExample}" includes="*.o" />
-		<fileset dir="${asmExample}" includes="*.cpp" />
-		<fileset dir="${asmExample}" includes="*.h" />
+		<delete>
+			<fileset dir="${asmExample}" includes="**/*.cpp" />
+			<fileset dir="${asmExample}" includes="**/*.h" />
+			<fileset dir="${asmExample}" includes="**/*.o" />
+		</delete>
 		<echo message="clean done" />
 	</target>
 
