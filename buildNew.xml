@@ -82,8 +82,11 @@
 				<classpath refid="classpath.test" />
 <<<<<<< HEAD:buildNew.xml
 <<<<<<< HEAD:buildNew.xml
+<<<<<<< HEAD:buildNew.xml
 				<test name="asmeta_to_cpp_travisci.ParserTest" />
 =======
+=======
+>>>>>>> parent of 4733370... update:buildcoverage.xml
 =======
 >>>>>>> parent of 4733370... update:buildcoverage.xml
 					<!--	<test name="asmeta_to_cpp_travisci.ParserTest" />
@@ -93,6 +96,9 @@
 				<formatter type="plain" usefile="false" />
 				<!-- to screen -->
 <<<<<<< HEAD:buildNew.xml
+<<<<<<< HEAD:buildNew.xml
+>>>>>>> parent of 4733370... update:buildcoverage.xml
+=======
 >>>>>>> parent of 4733370... update:buildcoverage.xml
 =======
 >>>>>>> parent of 4733370... update:buildcoverage.xml
@@ -116,6 +122,9 @@
 						<include name="*.jar" />
 					</fileset>
 <<<<<<< HEAD:buildNew.xml
+<<<<<<< HEAD:buildNew.xml
+>>>>>>> parent of 4733370... update:buildcoverage.xml
+=======
 >>>>>>> parent of 4733370... update:buildcoverage.xml
 =======
 >>>>>>> parent of 4733370... update:buildcoverage.xml
@@ -140,7 +149,10 @@
 			-->
 <<<<<<< HEAD:buildNew.xml
 <<<<<<< HEAD:buildNew.xml
+<<<<<<< HEAD:buildNew.xml
 =======
+=======
+>>>>>>> parent of 4733370... update:buildcoverage.xml
 =======
 >>>>>>> parent of 4733370... update:buildcoverage.xml
 		<fileset dir="${asmExample}" includes="*.o" />
