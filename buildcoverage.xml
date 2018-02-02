@@ -82,7 +82,7 @@
 				<classpath refid="classpath.test" />
 				<!-- <test name="asmeta_to_cpp_travisci.ParserTest" />
 				<test name="asmeta_to_cpp_travisci.ToCppTranslatorTest" />	-->
-				<test name="asmeta_to_cpp_travisci.BoostUnitCoverageTest" />
+				<test name="asmeta_to_cpp_travisci.BoostUnitCoverageTestParam" />
 				<!-- Print error message to screen 
 				<formatter type="plain" />-->
 			</junit>
