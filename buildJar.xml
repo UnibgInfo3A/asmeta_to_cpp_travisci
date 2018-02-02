@@ -29,7 +29,8 @@
 	<!--  export of jars for asmeta2 cpp  -->
 	<property name="AsmetaDirA" value="Z:\AgDocuments\google_drive\codice\research}\asmeta" />
 	<property name="AsmetaDirSilviaCasa" value="..\..\SVN\Sourceforge\ASMETA" />
-	<property name="ASMETA" value="${AsmetaDirSilviaCasa}" />
+	<property name="AsmetaDirSilviaUni" value="C:\..\..\Users\Silvia\Documents\Sourceforge\ASMETA" />
+	<property name="ASMETA" value="${AsmetaDirSilviaUni}" />
 	<property name="ASM_TOCPP_HOME" value="${ASMETA}\code\experimental\asmetal2cpp" />
 	<property name="ASM_TOCPP_CODE_GEN" value="${ASM_TOCPP_HOME}\asmetal2cpp_codegen" />
 	<property name="ASM_BOOST_UNIT_GEN" value="${ASM_TOCPP_HOME}\asmetal2cpp_boostunit" />
