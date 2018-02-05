@@ -11,12 +11,12 @@
 	<classpathentry kind="lib" path="lib/com.google.guava_21.0.0.v20170206-1425.jar"/>
 	<classpathentry kind="lib" path="asmetaJar/asmeta.emf_1.0.0.jar"/>
 	<classpathentry kind="lib" path="asmetaJar/asmeta.parser_1.0.0.jar"/>
-	<classpathentry kind="lib" path="asmetaJar/asmeta.boost_unit.jar"/>
 	<classpathentry kind="lib" path="lib/nusmv_generator.jar"/>
 	<classpathentry kind="lib" path="lib/atgt.jar"/>
 	<classpathentry kind="lib" path="lib/asmeta.simulator_1.0.0.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.emf.common.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.jar"/>
+	<classpathentry kind="lib" path="lib/asmeta.boost_unit.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="asmetaJar/asmeta.cpp_codegen.jar"/>
 	<classpathentry kind="output" path="bin"/>

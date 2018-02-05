@@ -24,11 +24,11 @@
 	<path id="classpath.test">
 		<pathelement location="asmetaJar/asmeta.parser_1.0.0.jar" />
 		<pathelement location="asmetaJar/asmeta.emf_1.0.0.jar" />
+		<pathelement location="asmetaJar/asmeta.cpp_codegen.jar" />
 		<pathelement location="lib/org.eclipse.emf.common.jar" />
 		<pathelement location="lib/org.eclipse.emf.ecore.jar" />
 		<pathelement location="lib/asmeta.simulator_1.0.0.jar" />
-		<pathelement location="asmetaJar/asmeta.cpp_codegen.jar" />
-		<pathelement location="asmetaJar/asmeta.boost_unit.jar" />
+		<pathelement location="lib/asmeta.boost_unit.jar" />
 		<pathelement location="lib/atgt.jar" />
 		<pathelement location="lib/nusmv_generator.jar" />
 		<pathelement location="lib/junit-4.11.jar" />
