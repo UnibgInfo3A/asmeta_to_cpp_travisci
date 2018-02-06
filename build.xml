@@ -76,7 +76,7 @@
 	</target>
 
 
-	<target name="test" depends="instrumentTest">
+	<target name="execTest" depends="instrumentTest">
 		<!-- Step 2: Wrap test execution with the JaCoCo coverage task 	-->
 		<jacoco:coverage destFile="${output.exec.fileTest} ">
 			<junit fork="true" forkmode="once">
@@ -94,7 +94,7 @@
 		<echo>test coverage complete!</echo>
 	</target>
 
-	<target name="report" depends="test">
+	<target name="report" depends="execTest">
 		<jacoco:report>
 			<executiondata>
 				<file file="${output.exec.fileTest}" />
@@ -119,8 +119,6 @@
 		<echo>report complete!</echo>
 	</target>
 
-	<target name="start" depends="clean,report" />
-
 	<!-- delete all class files -->
 	<target name="clean" depends="report">
 		<delete dir="${build.dir}" />
@@ -137,5 +135,8 @@
 		<echo message="clean done" />
 	</target>
 
+	<!-- start all the tests activities -->
+	
+	<target name="test" depends="clean" />
 
 </project>

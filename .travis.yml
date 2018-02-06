@@ -15,7 +15,3 @@ deploy:
   target-branch: master
   on:
     branch: master
- 
- 
- script:
-    ant clean
