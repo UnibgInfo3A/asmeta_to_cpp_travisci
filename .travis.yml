@@ -6,6 +6,7 @@ deploy:
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   verbose: true
   keep-history: true
+# aggiunto ci skip così posso fare commit sul master
   project-name: asmeta2cpp results [ci skip]
 # current dir to deploy to ghpages
 # local-dir: results

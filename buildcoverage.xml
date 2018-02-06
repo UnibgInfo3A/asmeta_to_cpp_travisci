@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <project name="asmeta_to_cpp_travisci" default="clean" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
 
+	<tstamp>
+	    <format property="TODAY" pattern="yy-MM-dd"/>
+	  </tstamp>
+	
 	<property name="src.dir" location="./src/asmeta_to_cpp_travisci" />
 	<property name="test.dir" location="./test/asmeta_to_cpp_travisci" />
 	<property name="jar.dir" location="./asmetaJar" />
@@ -9,7 +13,7 @@
 	<property name="build.test.dir" location="${build.dir}/tests" />
 	<property name="build.classes.instr.dir" location="${build.dir}/classes-instr" />
 	<property name="build.test.instr.dir" location="${build.dir}/tests-instr" />
-	<property name="output.dir" location="./output" />
+	<property name="output.dir" location="./output/coverage${TODAY}" />
 	<property name="output.report.dir" location="${output.dir}/report" />
 	<property name="output.jacoco.dir" location="${output.dir}/jacoco" />
 	<property name="output.exec.fileSrc" location="${output.jacoco.dir}/jacocosrc.exec" />
