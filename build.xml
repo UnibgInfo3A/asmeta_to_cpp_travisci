@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="asmeta_to_cpp_travisci" default="clean" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
+<project name="asmeta_to_cpp_travisci" default="test" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
 
 	<tstamp>
 	    <format property="TODAY" pattern="yy-MM-dd"/>
@@ -137,6 +137,6 @@
 
 	<!-- start all the tests activities -->
 	
-	<target name="test" depends="clean" />
+	<target name="test" depends="report" />
 
 </project>

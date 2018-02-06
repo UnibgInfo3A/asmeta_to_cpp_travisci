@@ -1,5 +1,9 @@
 language: java
 
+install: 
+  # install C++
+  - sudo apt-get install g++
+  
 deploy:
   provider: pages
   skip-cleanup: true
