@@ -1,7 +1,8 @@
 language: java
 
 #install: 
-  # install gcov
+# install gcov
+# non esiste il package gcov
 #  - sudo apt-get install gcov
   
 deploy:
