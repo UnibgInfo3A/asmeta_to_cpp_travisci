@@ -1,8 +1,8 @@
 language: java
 
-install: 
+#install: 
   # install gcov
-  - sudo apt-get install gcov
+#  - sudo apt-get install gcov
   
 deploy:
   provider: pages
