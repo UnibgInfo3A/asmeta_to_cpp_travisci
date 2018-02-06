@@ -19,23 +19,7 @@ BOOST_AUTO_TEST_CASE( my_test_0 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
 	// set monitored variables 
-	sluicegateground.passed[170]=false;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
-	// set monitored variables 
 	sluicegateground.passed[170]=true;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
-	// set monitored variables 
-	sluicegateground.passed[10]=false;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
@@ -67,6 +51,22 @@ BOOST_AUTO_TEST_CASE( my_test_0 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
 	// set monitored variables 
+	sluicegateground.passed[170]=true;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
+	// set monitored variables 
+	sluicegateground.passed[10]=true;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
+	// set monitored variables 
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
@@ -77,14 +77,6 @@ BOOST_AUTO_TEST_CASE( my_test_1 ){
 	sluiceGateGround sluicegateground;	
 	// state 
 	// check controlled variables 
-	// set monitored variables 
-	sluicegateground.passed[170]=false;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
 	// set monitored variables 
 	sluicegateground.passed[170]=true;
 	// call main rule
@@ -118,7 +110,15 @@ BOOST_AUTO_TEST_CASE( my_test_1 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
 	// set monitored variables 
-	sluicegateground.passed[10]=false;
+	sluicegateground.passed[10]=true;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
+	// set monitored variables 
+	sluicegateground.passed[170]=true;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
@@ -126,13 +126,13 @@ BOOST_AUTO_TEST_CASE( my_test_1 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
 	// set monitored variables 
-	sluicegateground.passed[10]=false;
+	sluicegateground.passed[10]=true;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
 	// state 
 	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
 	// set monitored variables 
 	// call main rule
 	sluicegateground.r_Main();
@@ -153,15 +153,31 @@ BOOST_AUTO_TEST_CASE( my_test_2 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
 	// set monitored variables 
-	sluicegateground.passed[10]=false;
+	sluicegateground.passed[10]=true;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
 	// state 
 	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
 	// set monitored variables 
-	sluicegateground.passed[10]=true;
+	sluicegateground.passed[170]=false;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
+	// set monitored variables 
+	sluicegateground.passed[170]=false;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
+	// set monitored variables 
+	sluicegateground.passed[170]=false;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
@@ -184,22 +200,6 @@ BOOST_AUTO_TEST_CASE( my_test_2 ){
 	// state 
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
-	// set monitored variables 
-	sluicegateground.passed[10]=true;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
-	// set monitored variables 
-	sluicegateground.passed[170]=false;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
 	// set monitored variables 
 	// call main rule
 	sluicegateground.r_Main();
@@ -228,6 +228,14 @@ BOOST_AUTO_TEST_CASE( my_test_3 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
 	// set monitored variables 
+	sluicegateground.passed[10]=false;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
+	// set monitored variables 
 	sluicegateground.passed[10]=true;
 	// call main rule
 	sluicegateground.r_Main();
@@ -235,6 +243,41 @@ BOOST_AUTO_TEST_CASE( my_test_3 ){
 	// state 
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
+	// set monitored variables 
+	sluicegateground.passed[170]=true;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
+	// set monitored variables 
+	sluicegateground.passed[10]=false;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
+	// set monitored variables 
+	sluicegateground.passed[10]=false;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
+	// set monitored variables 
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+}
+//3
+BOOST_AUTO_TEST_CASE( my_test_4 ){
+	// instance of the SUT
+	sluiceGateGround sluicegateground;	
+	// state 
+	// check controlled variables 
 	// set monitored variables 
 	sluicegateground.passed[170]=false;
 	// call main rule
@@ -260,26 +303,7 @@ BOOST_AUTO_TEST_CASE( my_test_3 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
 	// set monitored variables 
-	sluicegateground.passed[10]=true;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
-	// set monitored variables 
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-}
-//3
-BOOST_AUTO_TEST_CASE( my_test_4 ){
-	// instance of the SUT
-	sluiceGateGround sluicegateground;	
-	// state 
-	// check controlled variables 
-	// set monitored variables 
-	sluicegateground.passed[170]=true;
+	sluicegateground.passed[10]=false;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
@@ -288,30 +312,6 @@ BOOST_AUTO_TEST_CASE( my_test_4 ){
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
 	// set monitored variables 
 	sluicegateground.passed[10]=true;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
-	// set monitored variables 
-	sluicegateground.passed[170]=true;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
-	// set monitored variables 
-	sluicegateground.passed[10]=true;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
-	// set monitored variables 
-	sluicegateground.passed[170]=false;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
@@ -346,31 +346,15 @@ BOOST_AUTO_TEST_CASE( my_test_5 ){
 	// state 
 	// check controlled variables 
 	// set monitored variables 
+	sluicegateground.passed[170]=false;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
+	// set monitored variables 
 	sluicegateground.passed[170]=true;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
-	// set monitored variables 
-	sluicegateground.passed[10]=false;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
-	// set monitored variables 
-	sluicegateground.passed[10]=false;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
-	// set monitored variables 
-	sluicegateground.passed[10]=false;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
@@ -386,7 +370,15 @@ BOOST_AUTO_TEST_CASE( my_test_5 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
 	// set monitored variables 
-	sluicegateground.passed[170]=false;
+	sluicegateground.passed[170]=true;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
+	// set monitored variables 
+	sluicegateground.passed[10]=true;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
@@ -394,7 +386,15 @@ BOOST_AUTO_TEST_CASE( my_test_5 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
 	// set monitored variables 
-	sluicegateground.passed[170]=false;
+	sluicegateground.passed[170]=true;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
+	// set monitored variables 
+	sluicegateground.passed[10]=true;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
@@ -429,15 +429,7 @@ BOOST_AUTO_TEST_CASE( my_test_6 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
 	// set monitored variables 
-	sluicegateground.passed[170]=true;
-	// call main rule
-	sluicegateground.r_Main();
-	sluicegateground.fireUpdateSet();
-	// state 
-	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
-	// set monitored variables 
-	sluicegateground.passed[10]=true;
+	sluicegateground.passed[170]=false;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
@@ -461,13 +453,21 @@ BOOST_AUTO_TEST_CASE( my_test_6 ){
 	// check controlled variables 
 	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
 	// set monitored variables 
-	sluicegateground.passed[10]=false;
+	sluicegateground.passed[10]=true;
 	// call main rule
 	sluicegateground.r_Main();
 	sluicegateground.fireUpdateSet();
 	// state 
 	// check controlled variables 
-	BOOST_CHECK(sluicegateground.phase[0]==FULLYOPEN);
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
+	// set monitored variables 
+	sluicegateground.passed[170]=false;
+	// call main rule
+	sluicegateground.r_Main();
+	sluicegateground.fireUpdateSet();
+	// state 
+	// check controlled variables 
+	BOOST_CHECK(sluicegateground.phase[0]==FULLYCLOSED);
 	// set monitored variables 
 	// call main rule
 	sluicegateground.r_Main();

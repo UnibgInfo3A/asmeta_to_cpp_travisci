@@ -1,8 +1,8 @@
 language: java
 
 install: 
-  # install C++
-  - sudo apt-get install g++
+  # install gcov
+  - sudo apt-get install gcov
   
 deploy:
   provider: pages
