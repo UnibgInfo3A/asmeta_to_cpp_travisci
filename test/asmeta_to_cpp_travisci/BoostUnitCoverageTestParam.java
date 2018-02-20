@@ -62,7 +62,7 @@ public class BoostUnitCoverageTestParam {
 	
 	@Test
 	public void test1() throws Exception {
-		testAsmFile(asmFile, "simulator", "8", "7");
+		testAsmFile(asmFile, "simulator", "3", "8");
 	}
 	
 	/*@Test

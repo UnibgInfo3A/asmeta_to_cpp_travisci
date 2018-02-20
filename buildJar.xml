@@ -30,14 +30,14 @@
 	<property name="AsmetaDirA" value="Z:\AgDocuments\google_drive\codice\research}\asmeta" />
 	<property name="AsmetaDirSilviaCasa" value="..\..\SVN\Sourceforge\ASMETA" />
 	<property name="AsmetaDirSilviaUni" value="C:\..\..\Users\Silvia\Documents\Sourceforge\ASMETA" />
-	<property name="ASMETA" value="${AsmetaDirSilviaUni}" />
+	<property name="ASMETA" value="${AsmetaDirSilviaCasa}" />
 	<property name="ASM_TOCPP_HOME" value="${ASMETA}\code\experimental\asmetal2cpp" />
 	<property name="ASM_TOCPP_CODE_GEN" value="${ASM_TOCPP_HOME}\asmetal2cpp_codegen" />
 	<property name="ASM_BOOST_UNIT_GEN" value="${ASM_TOCPP_HOME}\asmetal2cpp_boostunit" />
 
 	<target name="export_jar_codegen">
 		<jar destfile="./asmetaJar/asmeta.cpp_codegen.jar" basedir="${ASM_TOCPP_CODE_GEN}/bin" />
-		<jar destfile="./asmetaJar/asmeta.boost_unit.jar" basedir="${ASM_BOOST_UNIT_GEN}/bin" />
+		<jar destfile="./lib/asmeta.boost_unit.jar" basedir="${ASM_BOOST_UNIT_GEN}/bin" />
 	</target>
 	
 </project>
