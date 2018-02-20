@@ -9,6 +9,9 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.asmeta.asm2code.compiler.CppCompiler;
 import org.asmeta.tocpp.abstracttestgenerator.AsmTestGeneratorBySimulationTest;
 import org.asmeta.tocpp.tocunit.AsmToBoostModuleTest;
 import org.asmeta.tocpp.tocunit.Experiment;
@@ -62,6 +65,7 @@ public class BoostUnitCoverageTestParam {
 	
 	@Test
 	public void test1() throws Exception {
+		Logger.getLogger(CppCompiler.class).setLevel(Level.DEBUG);;
 		testAsmFile(asmFile, "simulator", "3", "8");
 	}
 	

@@ -323,3 +323,10 @@ asm_examples\AdvancedClock.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests
 asm_examples\coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:4171	100.0
 asm_examples\AdvancedClock.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:4455	71.43
 asm_examples\AdvancedClock.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:3992	71.43
+asm_examples\AdvancedClock.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:5059	71.43
+asm_examples\AdvancedClock.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:3979	71.43
+asm_examples\coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:4299	100.0
+asm_examples\AdvancedClock.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:4082	71.43
+asm_examples\coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:4064	100.0
+asm_examples\AdvancedClock.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:4222	71.43
+asm_examples\coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:3936	100.0
