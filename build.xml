@@ -127,12 +127,13 @@
 				 e aggiungere depends="report" nel target "start"
 				<delete dir="${output.dir}" />
 			-->
-		<delete dir="${temp}" />
-		<!--<delete>
+		<!--<delete dir="${temp}" />-->
+		<delete>
 			<fileset dir="${temp}" includes="**/*.gcda" />
 			<fileset dir="${temp}" includes="**/*.gcno" />
 			<fileset dir="${temp}" includes="**/*.o" />
-		</delete>-->
+			<fileset dir="${temp}" includes="**/*.exe" />
+		</delete>
 		<delete>
 			<fileset dir="${asmExample}" includes="**/*.cpp" />
 			<fileset dir="${asmExample}" includes="**/*.h" />
