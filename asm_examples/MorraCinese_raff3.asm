@@ -24,6 +24,8 @@ signature:
 	dynamic monitored userChoice: Sign //scelta dell'utente
 	dynamic controlled computerChoice: Sign //scelta del computer
 
+	dynamic monitored computerChoiceMon: Sign //scelta dell'utente
+
 	dynamic controlled userWins: Natural //numero di vittorie dell'utente
 	dynamic controlled computerWins: Natural //numero di vittorie del computer
 
@@ -60,10 +62,9 @@ definitions:
 			(numberOfPlays >= maxNumberOfPlays and userWins = computerWins)) then
 			par
 				//il computer sceglie in modo nondeterministico un segno
-				choose $s in Sign with true do
-					par
-						computerChoice := $s //viene memorizzato il segno solo per vedere la giocata del computer nell'update set 
-						switch(playResult(userChoice, $s))
+
+						computerChoice := computerChoiceMon //viene memorizzato il segno solo per vedere la giocata del computer nell'update set
+						switch(playResult(userChoice, computerChoiceMon))
 							case WINFIRST:
 								par
 									outMess := "Hai vinto!"
@@ -77,7 +78,6 @@ definitions:
 							case PATTA:
 								outMess := "Patta."
 						endswitch
-					endpar
 				numberOfPlays := numberOfPlays + 1n
 			endpar
 		else

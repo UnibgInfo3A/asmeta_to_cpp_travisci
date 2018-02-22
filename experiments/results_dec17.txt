@@ -366,3 +366,4 @@ asm_examples\fattoriale.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	
 asm_examples\ferrymanSimulator.asm	AsmTestGeneratorBySimulation	toNumSteps:3	nTests:8	maxLength:3	time:4483	96.3
 asm_examples\Hemodialysis_ref4_forMC.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:12073	14.59
 asm_examples\sluiceGateGround.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:5429	100.0
+asm_examples\MorraCinese_raff3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:5106	93.33
