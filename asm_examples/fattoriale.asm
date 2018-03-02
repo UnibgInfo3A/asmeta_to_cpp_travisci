@@ -7,7 +7,7 @@ import StandardLibrary
 signature:
 	dynamic monitored valore: Integer
 	dynamic controlled indice: Integer
-	dynamic controlled fattoriale: Integer
+	dynamic controlled fattorialecontr: Integer
 	dynamic controlled outMess: String
 	
 definitions:
@@ -15,7 +15,7 @@ definitions:
 	macro rule r_fattoriale =
 		if(indice > 1) then
 			par
-				fattoriale := fattoriale*indice
+				fattorialecontr := fattorialecontr*indice
 				indice := indice - 1
 			endpar
 		endif
@@ -26,7 +26,7 @@ definitions:
 				if(valore>0) then
 					par
 						indice := valore
-						fattoriale := 1
+						fattorialecontr := 1
 						outMess := "Calcolo il fattoriale"
 					endpar
 				else
