@@ -401,3 +401,13 @@ asm_examples\euclideMCD.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	
 asm_examples\fattoriale.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2207	error
 asm_examples\ferrymanSimulator.asm	AsmTestGeneratorBySimulation	toNumSteps:6	nTests:8	maxLength:3	time:4873	96.55
 asm_examples\fattoriale.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:3365	error
+asm_examples\AdvancedClock.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:9994	73.91
+asm_examples\AdvancedClock2.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:3743	76.0
+asm_examples\AdvancedClockDeciSecond.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:3756	70.37
+asm_examples\coffeeVendingMachineNC.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:4970	100.0
+asm_examples\euclideMCD.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:3960	100.0
+asm_examples\ferrymanSimulator.asm	AsmTestGeneratorBySimulation	toNumSteps:9	nTests:8	maxLength:3	time:4944	96.55
+asm_examples\Hemodialysis_ref4_forMC.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:12385	14.77
+asm_examples\MorraCinese_raff3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:6006	91.11
+asm_examples\sluiceGateGround.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:5966	100.0
+asm_examples\QuickSort.asm	AsmTestGeneratorBySimulation	toNumSteps:16	nTests:8	maxLength:2	time:3241	error
