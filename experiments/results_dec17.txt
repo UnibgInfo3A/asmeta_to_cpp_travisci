@@ -411,3 +411,4 @@ asm_examples\Hemodialysis_ref4_forMC.asm	AsmTestGeneratorBySimulation	toNumSteps
 asm_examples\MorraCinese_raff3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:6006	91.11
 asm_examples\sluiceGateGround.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:5966	100.0
 asm_examples\QuickSort.asm	AsmTestGeneratorBySimulation	toNumSteps:16	nTests:8	maxLength:2	time:3241	error
+asm_examples\FLIP_FLOP_0.asm	AsmTestGeneratorBySimulation	toNumSteps:16	nTests:8	maxLength:2	time:9890	70.97
