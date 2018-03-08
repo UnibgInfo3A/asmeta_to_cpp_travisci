@@ -21,3 +21,5 @@ function qsort($seq in Seq(Integer)) =
 
 	main rule r_main =
 		f := qsort([5, 1, 8, 10, 2, 4, 7, 3, 6, 9])
+
+		//SequenceCT not implemented
