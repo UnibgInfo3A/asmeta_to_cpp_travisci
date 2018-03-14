@@ -3,10 +3,12 @@ asm SwapSort
 import  StandardLibrary
 	
 signature:
+	domain VectDomain subsetof Integer
 	static n: Integer
-	controlled vect: Integer -> Integer
-		
+	controlled vect: VectDomain -> Integer
+
 definitions:
+	domain VectDomain={0..9}
 	function n = 10
 
 	/* Note that no temporary variable is needed to swap two variables, if the
@@ -25,7 +27,7 @@ definitions:
 		r_swapSort[]
 
 default init s1:
-	function vect($x in Integer) = 
+	function vect($x in VectDomain) =
 		switch $x
 			case 0: 5
 			case 1: 7
