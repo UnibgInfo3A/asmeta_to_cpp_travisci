@@ -1,0 +1,9 @@
+ATM3: abstract domain not supported
+
+euclideMCD: problem in monitored initialization, one of the monitored function is requred after first step
+
+ExtendRule1: asm specification is wrong
+
+gameOfLife: SetCt not translated
+
+GilbreathCardTrick: during test is tested  BOOST_CHECK(gilbreathcardtricksimpl.indexFirstDeck[0]==undef);
