@@ -27,7 +27,7 @@ definitions:
 		r_swapSort[]
 
 default init s1:
-	function vect($x in VectDomain) =
+	function vect($x in VectDomain) = //$x in Integer is not working when translating into c++
 		switch $x
 			case 0: 5
 			case 1: 7
