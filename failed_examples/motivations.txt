@@ -7,3 +7,25 @@ ExtendRule1: asm specification is wrong
 gameOfLife: SetCt not translated
 
 GilbreathCardTrick: during test is tested  BOOST_CHECK(gilbreathcardtricksimpl.indexFirstDeck[0]==undef);
+
+QuickSort: SequenceCT not translated
+
+LGS_HM: non funziona perchè quando c'è una monitorata con lo stesso nome della controllata in c++ sono due funzioni e si crea conflitto
+
+Library: abstract domain not supported
+
+RushHourMon*****: contain undef
+
+sleepingBarber: abstract domain
+
+NeedhamSchroeder: abstract domain
+
+petriNet******: abstract domain
+
+philosophers1: agents
+
+production_cell: modules
+
+smartHome: agents
+
+sultan: undef  Unresolved reference plus(IntegerValue,UndefValue)
