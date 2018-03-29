@@ -494,3 +494,6 @@ asm_examples\ProdDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	
 asm_examples\ProdDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2781	error
 asm_examples\ProdDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2334	error
 asm_examples\ProdDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2415	error
+asm_examples\ProdDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:5064	error
+asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:4566	error
+asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2384	error
