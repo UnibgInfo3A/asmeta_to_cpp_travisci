@@ -503,3 +503,8 @@ asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLen
 asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2422	error
 asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2386	error
 asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2440	error
+asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2446	error
+asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2309	error
+asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:2299	error
+asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:1733	error
+asm_examples\ATM3.asm	AsmTestGeneratorBySimulation	toNumSteps:24	nTests:8	maxLength:3	time:1803	error

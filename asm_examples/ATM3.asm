@@ -214,7 +214,7 @@ definitions:
 					r_prelievo[]
 					//se la carta corrente non è accessibile,
 					//vuol dire che c'è stato un prelievo
-					if isDef(currCard) and not(accessible(currCard)) then
+					if /*isDef(currCard) and*/ not(accessible(currCard)) then
 						accessible(currCard) := true //il sistema centrale sblocca l'account della carta corrente
 					endif
 				endseq
