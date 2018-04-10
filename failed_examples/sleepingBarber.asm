@@ -31,8 +31,7 @@ asm sleepingBarber
 //observe that the barber is cutting hair, go to the waiting room, and both attempt
 //to occupy the single chair.
 
-import ../../STDL/StandardLibrary
-import ../../STDL/CTLlibrary
+import StandardLibrary
 
 signature:
 	abstract domain Chair
@@ -66,28 +65,7 @@ definitions:
 			endif
 		endif
 
-	//se un cliente e' in attesa, prima o poi potrebbe essere servito
-	CTLSPEC ag(chairOccupied(chair1) implies ef(not(chairOccupied(chair1))))
-	CTLSPEC ag(chairOccupied(chair2) implies ef(not(chairOccupied(chair2))))
-	//equivalente alle due precedenti
-	CTLSPEC (forall $c in Chair with ag(chairOccupied($c) implies ef(not(chairOccupied($c)))))
 
-	//esiste uno stato in cui arriva un cliente che non puo' essere servito perche'
-	//il barbiere sta tagliando i capelli, e non puo' neanche sedersi nella sala
-	//d'attesa perche' non ci sono sedie libere
-	CTLSPEC ef(newClient and not(barberSleeping) and chairOccupied(chair1)=false and chairOccupied(chair2)=false)
-	//equivalente alla precedente
-	CTLSPEC ef(newClient and not(barberSleeping) and not((exist $c in Chair with not(chairOccupied($c)))))
-	//equivalente alla precedente
-	CTLSPEC ef(newClient and not(barberSleeping) and (forall $c in Chair with chairOccupied($c)))
-
-	//esiste uno stato a partire dal quale, per sempre, il barbiere dorme e c'e'
-	//un cliente in attesa sulla prima sedia
-	CTLSPEC ef(eg(barberSleeping and chairOccupied(chair1)=true))
-
-	//esiste uno stato a partire dal quale, per sempre, il barbiere dorme e c'e'
-	//un cliente in attesa sulla seconda sedia
-	CTLSPEC ef(eg(barberSleeping and chairOccupied(chair2)=true))
 
 	main rule r_Main =
 		par

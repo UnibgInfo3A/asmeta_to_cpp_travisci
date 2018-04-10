@@ -12,7 +12,7 @@
 //per session. A warning is issued if the amount required
 //exceeds the balance of the account."
 
-asm ATM3
+asm ATM3Undef
 
 import StandardLibrary
 

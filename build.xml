@@ -130,6 +130,7 @@
 		<!--<delete dir="${temp}" />-->
 		<delete>
 			<fileset dir="${temp}" includes="**/*.gcda" />
+			<fileset dir="${temp}" includes="**/*.gcov" />
 			<fileset dir="${temp}" includes="**/*.gcno" />
 			<fileset dir="${temp}" includes="**/*.o" />
 			<fileset dir="${temp}" includes="**/*.exe" />
