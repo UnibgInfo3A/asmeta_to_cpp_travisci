@@ -19,7 +19,7 @@ signature:
 	enum domain Command = { ADD_BOOK | FIND_BOOK | EXIT}
 
 	dynamic controlled libraryState : State
-	dynamic out		   message : Any
+	dynamic out		   message : String
 
    // metodi di un libro
 	dynamic controlled bookIsbn :          Book -> Isbn
@@ -28,12 +28,12 @@ signature:
 	//dynamic controlled bookAuthorName:    Book -> String
 	//dynamic controlled bookCopiesNumber:  Book -> Natural
 
-	dynamic controlled libraryBooks: Library -> Powerset( Book)
+	dynamic controlled libraryBooks: Library -> Powerset(Book)
 
 	dynamic monitored selectedCommand : Command
 	dynamic monitored insertedBook :    Book
 
-	derived bookExists: Prod( Book, Library) -> Boolean
+	derived bookExists: Prod(Book, Library) -> Boolean
 
 	static theLibrary : Library
 	static theBook : Book
@@ -79,10 +79,10 @@ definitions:
 			par
 				if not( bookExists( insertedBook, theLibrary)) then
 					let ( $books = libraryBooks( theLibrary)) in
-						par
-							$books := including( $books, insertedBook)
+						//par
+							//$books := including( $books, insertedBook)
 							message := "Libro aggiunto correttamente!"
-						endpar
+						//endpar
 					endlet
 				endif
 				libraryState := COMMAND_SELECTION
@@ -99,4 +99,4 @@ definitions:
 default init initialize:
 
 	function libraryState = COMMAND_SELECTION
-	function libraryBooks( $l in Library) = {}
+	function libraryBooks($l in Library) = {}

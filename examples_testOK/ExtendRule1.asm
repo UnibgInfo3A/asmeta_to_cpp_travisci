@@ -13,9 +13,12 @@ signature:
 
 definitions:
 
+rule r_skipExtend=
+	skip
+
 	main rule r_main =
 	//let ($p = 51) in
-		extend AbsDom with $p do skip
+		extend AbsDom with $p do r_skipExtend[]
 	//endlet
 
 default init s0:
