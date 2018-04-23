@@ -6,12 +6,13 @@ import StandardLibrary
 
 signature:
 	controlled voti: Map(String, Integer)
+//	monitored votiMon: Map(String, Integer)
 
 
 definitions:
 
 
-	main rule r_Main = 
+	main rule r_Main =
 		voti := {"A"-> 5}
 
 

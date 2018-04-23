@@ -659,3 +659,6 @@ asm_examples\BagDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:16	nTests:8	m
 asm_examples\SetDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:16	nTests:8	maxLength:2	time:1693	error
 asm_examples\SetDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:16	nTests:8	maxLength:2	time:2608	error
 asm_examples\MapDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:16	nTests:8	maxLength:2	time:2175	error
+asm_examples\MapDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:16	nTests:8	maxLength:2	time:2269	error
+asm_examples\MapDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:16	nTests:8	maxLength:2	time:2196	error
+asm_examples\MapDomain.asm	AsmTestGeneratorBySimulation	toNumSteps:16	nTests:8	maxLength:2	time:3205	error
