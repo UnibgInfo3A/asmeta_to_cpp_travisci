@@ -2,7 +2,7 @@
 <project name="asmeta_to_cpp_travisci" default="test" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
 
 	<tstamp>
-		<format property="TODAY" pattern="yy-MM-dd HH-mm" />
+		<format property="TODAY" pattern="yy-MM-dd HH-mm-ss" />
 	</tstamp>
 
 	<property name="src.dir" location="./src" />

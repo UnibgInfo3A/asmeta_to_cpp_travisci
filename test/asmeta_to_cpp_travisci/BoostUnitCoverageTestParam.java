@@ -32,7 +32,7 @@ public class BoostUnitCoverageTestParam {
 		assert Files.isDirectory(dir.toPath());
 
 		File[] listOfFiles = dir.listFiles();
-		Object[][] result = new Object[listOfFiles.length-2][1]; //-2 perche uno e la standard library
+		Object[][] result = new Object[listOfFiles.length-1][1]; //-2 perche uno e la standard library
 		int i=0;
 		for (File file : listOfFiles) {
 			if (file.isFile() && file.getName().endsWith(".asm") && !file.getName().equalsIgnoreCase("StandardLibrary.asm")) {
