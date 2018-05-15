@@ -66,7 +66,7 @@ public class BoostUnitCoverageTestParam {
 	@Test
 	public void test1() throws Exception {
 		Logger.getLogger(CppCompiler.class).setLevel(Level.DEBUG);;
-		testAsmFile(asmFile, "simulator", "3", "8");
+		testAsmFile(asmFile, "simulator", "1000", "8");
 	}
 	
 	/*@Test
